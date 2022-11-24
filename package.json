@@ -1,0 +1,33 @@
+{
+  "name": "suisdk-vite-bundle",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "module": "dist/index.js",
+  "main": "dist/index.umd.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && vite build"
+  },
+  "dependencies": {
+    "@mysten/sui.js": "^0.17.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}
